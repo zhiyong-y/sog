@@ -1,7 +1,7 @@
 module.exports = {
   // assetsPublicPath: './',
   // 设置跟路径
-  publicPath: './',
+  publicPath: '/',
   // process.env.NODE_ENV === 'production' ? '/production-sub-path/' : '/',
   // outputDir: "",
   assetsDir: 'assets',
