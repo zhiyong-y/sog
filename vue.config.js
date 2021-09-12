@@ -1,9 +1,8 @@
 module.exports = {
-  // assetsPublicPath: './',
   // 设置跟路径
-  // publicPath: './',
+  // webpack将producttion作为默认值
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
-  // outputDir: "",
+  outputDir: process.env.OUT_PUT_DIR, // 默认dist
   // assetsDir: 'assets',
   // pages: {},
   indexPath: 'index.html',
