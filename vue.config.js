@@ -3,7 +3,7 @@ module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production' ? '/production-sub-path/' : './',
   // outputDir: "",
-  // assetsDir: "",
+  assetsDir: 'assets',
   // pages: {},
   lintOnSave: true,
   // 解决安装 less 以及 less-loader 后报错，JavaScript 不被允许使用
