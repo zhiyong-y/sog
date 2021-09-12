@@ -2,7 +2,7 @@ module.exports = {
   // assetsPublicPath: './',
   // 设置跟路径
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/sog-admin/' : '/',
+    process.env.NODE_ENV === 'production' ? '/sog/' : '',
   // outputDir: "",
   // assetsDir: 'assets',
   // pages: {},
