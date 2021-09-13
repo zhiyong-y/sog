@@ -1,7 +1,9 @@
+// const path = require('path')
+
 module.exports = {
   // 设置跟路径
   // webpack将producttion作为默认值
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
+  // publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
   outputDir: process.env.OUT_PUT_DIR, // 默认dist
   // assetsDir: 'assets',
   // pages: {},
@@ -36,4 +38,20 @@ module.exports = {
       }
     }
   }
+
+  // 自动导入公共样式
+  // chainWebpack: config => {
+  //   const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+  //   types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
+  // }
 }
+
+// function addStyleResource (rule) {
+//   rule.use('style-resource')
+//     .loader('style-resources-loader')
+//     .options({
+//       patterns: [
+//         path.resolve(__dirname, './src/styles/imports.styl'),
+//       ]
+//     })
+// }
