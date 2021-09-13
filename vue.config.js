@@ -1,4 +1,4 @@
-// const path = require('path')
+const path = require('path')
 
 module.exports = {
   // 设置跟路径
@@ -37,15 +37,23 @@ module.exports = {
         ws: false
       }
     }
-  }
+  },
 
-  // 自动导入公共样式
-  // chainWebpack: config => {
-  //   const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-  //   types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
-  // }
+  // https://cli.vuejs.org/zh/guide/webpack.html#%E7%AE%80%E5%8D%95%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F
+  chainWebpack: config => {
+    // const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    // types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
+
+    // 配置别名
+    config.resolve.alias
+      .set('@$', path.join(__dirname, 'src'))
+      .set('@/components', path.join(__dirname, 'src/components'))
+      .set('@/mixins', path.join(__dirname, 'src/mixins'))
+      .set('@/store', path.join(__dirname, 'src/store'))
+  }
 }
 
+// 自动导入公共样式
 // function addStyleResource (rule) {
 //   rule.use('style-resource')
 //     .loader('style-resources-loader')
