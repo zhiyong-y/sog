@@ -18,6 +18,16 @@ export default {
     return {
       a: 0
     }
+  },
+  methods: {
+    getData () {
+      this.$http.get('/home/getData').then(res => {
+        console.log(res, 1)
+      })
+    }
+  },
+  mounted () {
+    this.getData()
   }
 }
 </script>
