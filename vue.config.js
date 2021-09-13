@@ -3,7 +3,7 @@
 module.exports = {
   // 设置跟路径
   // webpack将producttion作为默认值
-  // publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
   outputDir: process.env.OUT_PUT_DIR, // 默认dist
   // assetsDir: 'assets',
   // pages: {},
