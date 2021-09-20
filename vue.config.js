@@ -3,12 +3,12 @@ const path = require('path')
 module.exports = {
   // 设置跟路径
   // webpack将producttion作为默认值
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/sog/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   outputDir: process.env.OUT_PUT_DIR, // 默认dist
   // assetsDir: 'assets',
   // pages: {},
   indexPath: 'index.html',
-  lintOnSave: true,
+  lintOnSave: false,
   // 解决安装 less 以及 less-loader 后报错，JavaScript 不被允许使用
   css: {
     loaderOptions: {

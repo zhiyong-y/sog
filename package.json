@@ -1,16 +1,19 @@
 {
   "name": "sog-admin",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
+    "serve": "vue-cli-service serve",
     "serve:pro": "vue-cli-service serve --mode production",
     "serve:dev": "vue-cli-service serve --mode development",
     "build:pro": "vue-cli-service build --mode production",
     "build:dev": "vue-cli-service build --mode development",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name sog-count-to --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "prettier": "^1.19.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -24,7 +27,7 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "axios": "^0.21.4",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -33,6 +36,8 @@
     "mockjs": "^1.1.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "sog-count-to": "^0.1.5",
+    "vue-tag-textarea": "^0.1.0",
     "vue-template-compiler": "^2.6.11",
     "webpack-api-mocker": "^1.7.6"
   },
@@ -49,10 +54,22 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "indent": [ 2, 2],
-      "eqeqeq": [2, "always"],
-      "semi": [2, "never"],
-      "quotes": [2, "single"]
+      "indent": [
+        2,
+        2
+      ],
+      "eqeqeq": [
+        2,
+        "always"
+      ],
+      "semi": [
+        2,
+        "never"
+      ],
+      "quotes": [
+        2,
+        "single"
+      ]
     }
   },
   "browserslist": [

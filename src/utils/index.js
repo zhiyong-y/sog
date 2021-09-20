@@ -57,6 +57,7 @@ axios.interceptors.response.use(
   }
 )
 export default {
+  // 继续扩展put/delete
   get (url, params = {}) {
     return new Promise((resolve, reject) => {
       axios

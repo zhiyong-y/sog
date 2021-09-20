@@ -1,10 +1,7 @@
 <template>
   <div class="about">
-    123
     <h1>{{msg}}</h1>
-    <test :msg="msg"/>
-    <sog-count-to :startVal="1000" :endVal="1504" :duration="5000" class="sog-count-to"></sog-count-to>
-    <!-- <w-textarea tag="yu"/> -->
+    <test/>
   </div>
 </template>
 <script>
@@ -19,9 +16,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.sog-count-to {
-  font-size: 26px;
-  font-weight: 500;
-}
-</style>
